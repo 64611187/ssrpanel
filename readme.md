@@ -63,6 +63,7 @@ Laravel 5.4 + Metronic 4.7
 cd /home/wwwroot/
 git clone https://github.com/ssrpanel/ssrpanel.git
 cd ssrpanel/
+config\database.php mysql选项自行配置数据库
 php composer.phar install
 cp .env.example .env
 php artisan key:generate
@@ -106,7 +107,7 @@ service nginx reload
 ````
 找到SSR服务端所在的ssserver.log文件
 进入ssrpanel所在目录，建立一个软连接，并授权
-cd /home/wwwroot/ssrpanel/public/storage/app/public
+cd /home/wwwroot/ssrpanel/storage/app/public
 ln -S ssserver.log /root/shadowsocksr/ssserver.log
 chown www:www ssserver.log
 ````
